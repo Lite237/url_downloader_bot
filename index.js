@@ -16,7 +16,7 @@ const app = express();
 // Set the bot API endpoint
 app.use(await bot.createWebhook({ domain: process.env.webhookDomain }));
 
-app.use(express.static("./test"));
+app.use(express.static("./downloads"));
 app.use(express.static("./"));
 
 async function setFile(data, filename) {
